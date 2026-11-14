@@ -228,6 +228,8 @@
     if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Space"].includes(e.code)) {
       e.preventDefault();
     }
+    // Ignore OS key auto-repeat so held Space/W/↑ don't restart or chain-jump.
+    if (e.repeat) return;
     if (e.code === "KeyR") {
       startGame();
     }
