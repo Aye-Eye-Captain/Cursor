@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Skybound Scout</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <header class="hud">
+      <div class="brand">Skybound Scout</div>
+      <div class="stats">
+        <span id="coinStat">Coins 0</span>
+        <span id="lifeStat">Lives 3</span>
+      </div>
+    </header>
+    <canvas id="game" width="960" height="540" aria-label="Skybound Scout game canvas"></canvas>
+    <div id="overlay" class="overlay hidden" role="dialog" aria-live="polite">
+      <div class="panel">
+        <h1 id="overlayTitle">Ready?</h1>
+        <p id="overlayText">Collect coins, stomp bugs, reach the beacon.</p>
+        <button id="overlayBtn" type="button">Start</button>
+      </div>
+    </div>
+    <div class="touch-controls" aria-hidden="true">
+      <div class="touch-cluster left">
+        <button type="button" data-dir="left" class="touch-btn">◀</button>
+        <button type="button" data-dir="right" class="touch-btn">▶</button>
+      </div>
+      <div class="touch-cluster right">
+        <button type="button" data-action="jump" class="touch-btn jump">Jump</button>
+      </div>
+    </div>
+    <p class="hint">Arrows / WASD to move · Space / W / ↑ to jump · R to restart</p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
